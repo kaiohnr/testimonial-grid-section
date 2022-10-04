@@ -1,0 +1,136 @@
+.testimonials {
+  display: grid;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 32rem) {
+  .testimonials {
+    grid-template-areas:
+      'one one'
+      'two five'
+      'three five'
+      'four four';
+  }
+
+  .testimonials__item:nth-child(1) {
+    grid-area: one;
+  }
+  .testimonials__item:nth-child(2) {
+    grid-area: two;
+  }
+  .testimonials__item:nth-child(3) {
+    grid-area: three;
+  }
+  .testimonials__item:nth-child(4) {
+    grid-area: four;
+  }
+  .testimonials__item:nth-child(5) {
+    grid-area: five;
+  }
+}
+
+@media screen and (min-width: 52rem) {
+  .testimonials {
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+  }
+}
+
+.testimonials__item {
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.testimonials__item:nth-child(1) {
+  background-color: var(--article-bg-purple);
+  position: relative;
+  z-index: 1;
+
+  background-image: url('../assets/images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: 85% 0;
+}
+
+.testimonials__item:nth-child(2) {
+  background-color: var(--article-bg-grayish-blue);
+}
+
+.testimonials__item:nth-child(3) {
+  background-color: var(--article-bg-white);
+}
+
+.testimonials__item:nth-child(4) {
+  background-color: var(--article-bg-blackish-blue);
+}
+
+.testimonials__item:nth-child(4) img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.testimonials__item:nth-child(5) {
+  background-color: var(--article-bg-white);
+}
+
+.testimonials__item:nth-child(3) .testimonials__item--title,
+.testimonials__item:nth-child(5) .testimonials__item--title {
+  color: var(--article-title-clr-dark-gray);
+}
+
+.testimonials__item:nth-child(3) .person__info--name,
+.testimonials__item:nth-child(5) .person__info--name {
+  color: var(--article-title-clr-dark-gray);
+}
+
+.testimonials__item:nth-child(1),
+.testimonials__item:nth-child(2),
+.testimonials__item:nth-child(5) {
+  color: var(--article-title-clr-white);
+}
+
+.testimonials__item:nth-child(4) .testimonials__item--title {
+  color: var(--article-title-clr-white);
+}
+
+.person__info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.person__info--image {
+  border-radius: 50%;
+  border: 2px solid rgba(207, 207, 207, 0.5);
+  height: 46px;
+  width: 46px;
+}
+
+.person__info--name {
+  color: var(--article-name-clr);
+  font-size: var(--fs-400);
+}
+
+.person__info--position {
+  font-size: var(--fs-400);
+  color: var(--article-position-clr);
+}
+
+.testimonials__item--title {
+  color: var(--article-title-clr);
+  font-size: var(--fs-500);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.testimonials__item:nth-child(1) .testimonials__item--description {
+  color: var(--article-description-clr-light-gray);
+}
+
+.testimonials__item--description {
+  color: var(--article-description-clr-gray);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+}
